@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      estudiantes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+        <ion-col col-25><b>Nombre</b></ion-col>
+        <ion-col col-25><b>edad</b></ion-col>
+    </ion-row>
+     <ion-row wrap *ngFor="let item of listado;let index=index">
+        <ion-col col-25><b>{{item.nombre}}</b></ion-col>
+        <ion-col c1-25><b>{{item.edad}}</b></ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button routerLink="/formulario"> agregar </ion-button>
+</ion-content>
+
